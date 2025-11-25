@@ -1,0 +1,16 @@
+ststic -box {
+    background-color:lightcoral;
+        color:white;
+    padding: 20px;
+    boder: 2px solid black;
+/*even if you set these, they won't move the box*/
+position: static;
+
+raltive-box {
+    background-color: lightskyblue;
+    color: white;
+    pad
+    
+   
+
+
