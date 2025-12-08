@@ -1,16 +1,68 @@
 ststic -box {
-    background-color:lightcoral;
-        color:white;
+    background-color: lightcoral;
+    color: white;
     padding: 20px;
     boder: 2px solid black;
-/*even if you set these, they won't move the box*/
-position: static;
-
-raltive-box {
-    background-color: lightskyblue;
-    color: white;
-    pad
-    
-   
+    /*even if you set these, they won't move the box*/
+    position: static;
 
 
+    raltive-box {
+        background-color: lightskyblue;
+        color: white;
+        padding: 20px;
+        border: 2px solid blue;
+
+        position: relative;
+        /*move 30px down from its original top edge 20 px right */
+
+
+        normal -box {
+            background-color: lightgray;
+            padding: 20px;
+            border: 2px solid gray;
+            /*this box does not move up to fill the relative box's orginal spot */
+
+
+            parent-relative {
+                background-color: #f0f0f0 padding: 50px;
+                border: 3px dashed black height: 200px;
+                /* 1.this makes it the positing context for its absoulute child */
+                position: relative;
+
+
+                absokute-box {
+                    background-color: lightgreen color black padding: 10px;
+                    border: 2px solid green;
+                    width: 100px;
+
+                    position: absolute;
+                    /*p 2. position relative to the top-right corner of the parent */
+                    top: 10px;
+                    right: 10px;
+
+
+                    aboslute-box2 {
+                        position: absolute;
+                        left: 10px;
+                        top: 10px;
+                        width: 100px;
+                        height: 100px;
+                        border: 3px solid green;
+                        background-color: lightgreen;
+
+
+                        fixd-box {
+                            background-color: #333;
+                            color: white;
+                            padding: 15px;
+                            width: 100px;
+                            /*spans the full width of the viewport*/
+                            text-align: center;
+
+                            position: fixed;
+                            /* locks it to the bottom of the browser window*/
+                            bottom: 0;
+                            right: 0;
+                            z-index: 1000;
+                            /*ensures it is on top of other content*/
