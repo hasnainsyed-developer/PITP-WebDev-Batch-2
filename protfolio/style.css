@@ -1,0 +1,321 @@
+/* ===== GENERAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  color: #222;
+}
+
+/* ===== NAVBAR ===== */
+.header {
+  width: 100%;
+  background: #000;
+  padding: 15px 0;
+}
+
+.navbar {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #00b894;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar ul li a:hover {
+  color: #00b894;
+}
+
+/* ===== HERO ===== */
+.hero {
+  height: 90vh;
+  background: url('./blue-futuristic-networking-technology_53876-97395.jpg') no-repeat center/cover;
+  display: flex;
+  align-items: center;
+}
+
+.skill a {
+  text-decoration: none;
+  color: white;
+}
+
+.skill:hover {
+  cursor: pointer;
+}
+
+.hero-text {
+  height: 100%; 
+  width: 100%; 
+  background-color: rgba(0,0,0,0.7); 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column;
+  padding: 5%;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  color: white;
+}
+
+.hero-text span {
+  color: #00b894;
+}
+
+.hero-text p {
+  color: #eee;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.btn {
+  background: #00b894;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #019972;
+}
+
+/* ===== SECTIONS ===== */
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* ===== SKILLS ===== */
+/* ===== SKILLS (Color Added) ===== */
+.skills {
+  padding: 60px 10%;
+  background: #fff;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.skills-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill {
+  width: 225px;
+  padding: 20px;
+  background: #00b894;   /* 🔥 Your requested color */
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;          /* Text color clean & readable */
+  transition: 0.3s;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+  background: #019972;   /* Darker hover shade */
+}
+
+
+/* ===== PROJECTS ===== */
+.projects {
+  padding: 60px 10%;
+  background: #fff;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.project-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  width: 300px;
+  padding: 20px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  background: #e6e6e6;
+}
+
+.html-info {
+  background: #ffffff;
+  padding: 20px;
+  border-left: 5px solid #00b894;
+  border-radius: 8px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+  width: 80%;
+  margin: 20px auto;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.html-info:hover {
+  transform: scale(1.01);
+  transition: 0.3s ease;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
+}
+/* ===== GENERAL STYLE ===== */
+.css-info, .js-info, .final-info {
+  background: #ffffff;
+  padding: 25px;
+  margin: 20px auto;
+  width: 80%;
+  line-height: 1.7;
+  border-radius: 10px;
+  box-shadow: 0px 0px 12px rgba(0,0,0,0.12);
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+}
+
+/* Hover Animation */
+.css-info:hover, .js-info:hover, .final-info:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+}
+
+.css-info, .js-info, .final-info {
+    border-left: 6px solid #00b894;
+}
+
+/* Optional: Center the text inside stars */
+.css-info::first-line,
+.js-info::first-line,
+.final-info::first-line {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  padding: 60px 10%;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  border: none;
+  cursor: pointer;
+  
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+
+/* ========================================================= */
+/* ========== 🌟 PROFESSIONAL ABOUT (MY SELF) SECTION 🌟 ===== */
+/* ========================================================= */
+
+.about-section {
+  max-width: 850px;
+  background: white;
+  padding: 50px;
+  margin: 50px auto;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1.5s ease;
+}
+
+.about-section h2 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #00b894;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.about-section p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.about-section strong {
+  color: #00b894;
+  font-weight: 700;
+}
+
+/* Smooth Fade Animation */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Hover Glow */
+.about-section:hover {
+  box-shadow: 0 12px 35px rgba(0, 184, 148, 0.4);
+  transition: 0.4s;
+}
