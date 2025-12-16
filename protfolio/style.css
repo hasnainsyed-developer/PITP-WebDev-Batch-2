@@ -11,30 +11,7 @@ body {
   color: #222;
 }
 
-/* ===== NAVBAR ===== */
-/* .header {
-  width: 100%;
-  background: #000;
-  padding: 15px 0;
-} */
-/* 
-.navbar {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-} */
 
-/* .logo {
-  color: white;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.logo span {
-  color: #00b894;
-} */
 
 .navbar ul {
   display: flex;
