@@ -8,15 +8,51 @@
 
     <!-- CSS FILE LINK -->
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="./pngtree-sy-letter-logo-icon-design-template-elements-creative-abstract-illustration-vector-png-image_12791191.png">
-</head>
+    <link rel="icon" type="image/x-icon"
+        href="./pngtree-sy-letter-logo-icon-design-template-elements-creative-abstract-illustration-vector-png-image_12791191.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
 
     <!-- ===== HEADER ===== -->
-    <header class="header">
-        <nav class="navbar">
+    <header class="header m-0 p-0">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary m-0 p-0">
+            <div class="container-fluid" style="width: 100%; background: #000; ">
+                <a class="navbar-brand logo" style="color: white; font-size: 28px; font-weight: bold;" href="#"><span
+                        style="color: #00b894;">Portfolio</span></a>
+                <button class="navbar-toggler" style="background-color: #00b894;" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex align-items-center pb-4" role="search">
+                        <input class="form-control me-2 mt-4 mb-1" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- <nav class="navbar">
             <h2 class="logo"><span>Portfolio</span></h2>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -25,41 +61,43 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
+        </nav> -->
     </header>
 
     <!-- ===== HERO SECTION ===== -->
     <section id="home" class="hero">
         <div class="hero-text">
             <h1>Hello, I'm <span>Syed Ghulam Rasool Shah Lakyari</span></h1>
-            <p>My name is Syed Ghulam Rasool Shah Lakyari. I am a dedicated 
-            college student with a strong passion for front-end web development.  
-           “I am studying”in college from  
-            <strong>Mehran University Higher secondary Public School and College.</strong>  
-            I am focused, hardworking, and always excited to learn new technologies
-            that improve my web development skills.</p>
+            <p>My name is Syed Ghulam Rasool Shah Lakyari. I am a dedicated
+                college student with a strong passion for front-end web development.
+                “I am studying”in college from
+                <strong>Mehran University Higher secondary Public School and College.</strong>
+                I am focused, hardworking, and always excited to learn new technologies
+                that improve my web development skills.
+            </p>
             <a href="#projects" class="btn">View Projects</a>
         </div>
     </section>
 
- <section id="skills" class="skills">
-       <h2 class="section-title"><strong>My Skills</strong></h2>
+    <section id="skills" class="skills">
+        <h2 class="section-title"><strong>My Skills</strong></h2>
 
         <div class="skills-box">
             <div class="skill">
                 <a href="#html">HTML</a>
             </div>
-            <div class="skill"> 
-                <a href="#css">CSS</a></div>
-             
             <div class="skill">
-             <a href="#JS">JavaScript</a>
+                <a href="#css">CSS</a>
             </div>
-            
+
+            <div class="skill">
+                <a href="#JS">JavaScript</a>
+            </div>
+
         </div>
     </section>
 
- <!-- ===== PROJECTS ===== -->
+    <!-- ===== PROJECTS ===== -->
     <section id="projects" class="projects">
         <h2 class="section-title">Projects</h2>
 
@@ -74,97 +112,111 @@
                 <p>"Based random" answer game.</p>
             </div>
 
-           
+
         </div>
     </section>
 
     <!-- ===== ABOUT ===== -->
     <section id="about" class="about-section">
-    <h2>About Me</h2>
+        <h2>About Me</h2>
 
-    <p>
-        My name is Syed Ghulam Rasool Shah Lakyari, and I am a dedicated and passionate Web Developer who loves learning new things every single day. Web development inspires me because it combines creativity with logic, and it allows me to turn ideas into real digital experiences.<br><br>
+        <p>
+            My name is Syed Ghulam Rasool Shah Lakyari, and I am a dedicated and passionate Web Developer who loves
+            learning new things every single day. Web development inspires me because it combines creativity with logic,
+            and it allows me to turn ideas into real digital experiences.<br><br>
 
-        I consider myself a self-motivated learner. I enjoy understanding how websites work, how layouts are designed, and how user experiences are created. Every day, I try to learn something new—whether it’s a new coding trick, a design technique, or a better way to solve a problem.<br><br>
+            I consider myself a self-motivated learner. I enjoy understanding how websites work, how layouts are
+            designed, and how user experiences are created. Every day, I try to learn something new—whether it’s a new
+            coding trick, a design technique, or a better way to solve a problem.<br><br>
 
-        My goal is to become a professional and highly skilled web developer who can create modern, clean, and user-friendly websites. I believe success comes with consistency, and I follow this rule in my coding journey. I always try to improve my skills and push myself toward becoming better than yesterday.<br><br>
+            My goal is to become a professional and highly skilled web developer who can create modern, clean, and
+            user-friendly websites. I believe success comes with consistency, and I follow this rule in my coding
+            journey. I always try to improve my skills and push myself toward becoming better than yesterday.<br><br>
 
-        I love creating websites that look beautiful and work smoothly on all devices. I pay attention to small details like colors, spacing, animations, and layout balance. I want every project I make to reflect my creativity and hard work.<br><br>
+            I love creating websites that look beautiful and work smoothly on all devices. I pay attention to small
+            details like colors, spacing, animations, and layout balance. I want every project I make to reflect my
+            creativity and hard work.<br><br>
 
-        In the future, I want to learn advanced JavaScript, frameworks like React, and UI/UX design to create even better and more powerful web applications. I want to grow in this field and make a successful career in web development.<br><br>
+            In the future, I want to learn advanced JavaScript, frameworks like React, and UI/UX design to create even
+            better and more powerful web applications. I want to grow in this field and make a successful career in web
+            development.<br><br>
 
-        Outside of coding, I am a simple and positive person. I enjoy learning new technologies, watching coding videos, and practicing small projects in my free time. Every small step brings me closer to my goals, and I am excited about my future as a developer.<br><br>
+            Outside of coding, I am a simple and positive person. I enjoy learning new technologies, watching coding
+            videos, and practicing small projects in my free time. Every small step brings me closer to my goals, and I
+            am excited about my future as a developer.<br><br>
 
-        This is just the beginning of my journey, and I am ready to work hard, stay consistent, and become the best version of myself in the world of web development.<br><br>
+            This is just the beginning of my journey, and I am ready to work hard, stay consistent, and become the best
+            version of myself in the world of web development.<br><br>
+        </p>
+    </section>
+
+    <section>
+        <p class="html-info" id="html">
+            ⭐ HTML (HyperText Markup Language) <br><br>
+
+            HTML is the basic building block of every website. <br>
+            It provides the structure of a webpage, just like bones in the human body. <br><br>
+
+            With HTML we can: <br><br>
+
+            Add headings, paragraphs, images, links <br>
+            Create lists, tables, forms <br>
+            Organize the content properly <br><br>
+
+            HTML is the first step of web development and it defines what will appear on the screen.
+        </p>
+    </section>
+    <!-- ⭐ CSS Section -->
+    <p class="css-info" id="css">
+        ⭐ CSS (Cascading Style Sheets) <br><br>
+
+        CSS is used for styling and designing the website. <br>
+        It decides how the website will look. <br><br>
+
+        CSS helps in: <br><br>
+
+        Adding colors <br>
+        Changing fonts <br>
+        Designing layouts <br>
+        Creating animations <br>
+        Making the website responsive <br><br>
+
+        Without CSS, every website would look plain and simple.
+        CSS adds beauty and life to webpages.
     </p>
-</section>
-
-<section>
-    <p class="html-info" id="html">
-⭐ HTML (HyperText Markup Language) <br><br>
-
-HTML is the basic building block of every website. <br>
-It provides the structure of a webpage, just like bones in the human body. <br><br>
-
-With HTML we can: <br><br>
-
-Add headings, paragraphs, images, links <br>
-Create lists, tables, forms <br>
-Organize the content properly <br><br>
-
-HTML is the first step of web development and it defines what will appear on the screen.
-</p>
-</section>
-   <!-- ⭐ CSS Section -->
-<p class="css-info" id="css">
-⭐ CSS (Cascading Style Sheets) <br><br>
-
-CSS is used for styling and designing the website. <br>
-It decides how the website will look. <br><br>
-
-CSS helps in: <br><br>
-
-Adding colors <br>
-Changing fonts <br>
-Designing layouts <br>
-Creating animations <br>
-Making the website responsive <br><br>
-
-Without CSS, every website would look plain and simple.  
-CSS adds beauty and life to webpages.
-</p>
 
 
-<!-- ⭐ JavaScript Section -->
-<p class="js-info" id="JS">
-⭐ JavaScript (JS) <br><br>
+    <!-- ⭐ JavaScript Section -->
+    <p class="js-info" id="JS">
+        ⭐ JavaScript (JS) <br><br>
 
-JavaScript is used to make the website interactive and dynamic. <br>
-It controls the behavior of the webpage. <br><br>
+        JavaScript is used to make the website interactive and dynamic. <br>
+        It controls the behavior of the webpage. <br><br>
 
-JavaScript is used for: <br><br>
+        JavaScript is used for: <br><br>
 
-Showing and hiding content <br>
-Creating sliders and animations <br>
-Validating forms <br>
-Making interactive menus <br>
-Building modern web apps <br><br>
+        Showing and hiding content <br>
+        Creating sliders and animations <br>
+        Validating forms <br>
+        Making interactive menus <br>
+        Building modern web apps <br><br>
 
-JS makes the website active and smart.
-</p>
-
-
-<!-- ⭐ Final Note Section -->
-<p class="final-info">
-⭐ Final Note <br><br>
-
-I believe that learning HTML, CSS, and JavaScript is the first step toward becoming a strong developer.  
-I am working hard to master these skills and build a bright future in web development.  
-With dedication, focus, and passion, I am confident that I will achieve my goals and become a successful professional in this field.
-</p>
+        JS makes the website active and smart.
+    </p>
 
 
-   
+    <!-- ⭐ Final Note Section -->
+    <p class="final-info">
+        ⭐ Final Note <br><br>
+
+        I believe that learning HTML, CSS, and JavaScript is the first step toward becoming a strong developer.
+        I am working hard to master these skills and build a bright future in web development.
+        With dedication, focus, and passion, I am confident that I will achieve my goals and become a successful
+        professional in this field.
+    </p>
+
+
+
 
     <!-- ===== CONTACT ===== -->
     <section id="contact" class="contact">
@@ -180,9 +232,13 @@ With dedication, focus, and passion, I am confident that I will achieve my goals
 
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
-        <p>© 2025 Syed Ghulam Rasool Shah Lakyari  | All Rights Reserved</p>
+        <p>© 2025 Syed Ghulam Rasool Shah Lakyari | All Rights Reserved</p>
         <p>Phone: <strong><a href="tel:+923025118405">Call Me 3025118405</a></strong> </p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 
 </body>
 
