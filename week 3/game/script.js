@@ -8,6 +8,9 @@ const answers = [
     "Signs point to yes.",
     "My sources say no.",
     "Chances are not so good.",
+
+
+    
     "Very doubtful.",
     "404 Error : Fate not found.",
     "Only if you do a little dance first.",
