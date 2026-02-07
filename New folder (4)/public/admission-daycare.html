@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Academy | Single Page School Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="./admission-style.css">
+    <style>
+        /* Smooth Scrolling Enable */
+        html { scroll-behavior: smooth; }
+        section { scroll-margin-top: 70px; } /* Navbar height adjustment */
+    </style>
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <i class="fas fa-graduation-cap me-2"></i>MUHSPS
+            </a>
+            <div class="ms-auto">
+                <a href="index.html" class="btn btn-outline-primary rounded-pill px-4">Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-11">
+                <div class="form-container">
+                    <h2 class="text-center fw-bold mb-4">BABY DAY CARE ADMISSION</h2>
+                    
+                    <form id="admissionForm">
+                        <input type="hidden" id="studentClass" value="BABY DAY CARE">
+                        
+                        <div class="row g-4">
+                            <!-- Left Column: Child Details -->
+                            <div class="col-md-7">
+                                <h4 class="section-title">Child Details</h4>
+                                <div class="row g-3">
+                                    <div class="col-md-12">
+                                        <label class="form-label">1. Name of Child (in block letters) <span class="required-star">*</span></label>
+                                        <input type="text" class="form-control" id="studentName" style="text-transform: uppercase;" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">3. Surname & Mother Tongue <span class="required-star">*</span></label>
+                                        <input type="text" class="form-control" id="surnameMotherTongue" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">5. Date of Birth <span class="required-star">*</span></label>
+                                        <input type="date" class="form-control" id="dob" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">6. Place of Birth <span class="required-star">*</span></label>
+                                        <input type="text" class="form-control" id="pob" required>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">7. Age <span class="required-star">*</span></label>
+                                        <input type="text" class="form-control" id="age" required>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">9. Gender <span class="required-star">*</span></label>
+                                        <select class="form-select" id="gender" required>
+                                            <option value="" selected disabled>Select</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">8. B.Form No. <span class="required-star">*</span></label>
+                                        <input type="text" class="form-control" id="bFormNo" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">11. Religion <span class="required-star">*</span></label>
+                                        <input type="text" class="form-control" id="religion" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">10. WhatsApp Contact No. <span class="required-star">*</span></label>
+                                        <input type="tel" class="form-control" id="whatsappContact" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Column: Photo & Parent Details -->
+                            <div class="col-md-5">
+                                <div class="text-center mb-4">
+                                    <label class="form-label d-block mb-2">Child Photograph <span class="required-star">*</span></label>
+                                    <div class="photo-upload-box" onclick="document.getElementById('studentPhoto').click()">
+                                        <div id="photoPreview" class="photo-preview w-100 h-100 d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-plus-circle"></i>
+                                            <span>Upload size 5MB</span>
+                                        </div>
+                                    </div>
+                                    <input type="file" id="studentPhoto" class="d-none" accept="image/*" required>
+                                </div>
+
+                                <h4 class="section-title">Parent / Guardian Details</h4>
+                                <div class="row g-3">
+                                    <div class="col-md-12">
+                                        <label class="form-label">2. Father's & Mother Guardian Name <span class="required-star">*</span></label>
+                                        <input type="text" class="form-control" id="fatherName" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">4. Father's CNIC <span class="required-star">*</span></label>
+                                        <input type="text" class="form-control" id="fatherCnic" placeholder="XXXXX-XXXXXXX-X" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">12. Occupation of Parent/Guardian <span class="required-star">*</span></label>
+                                        <input type="text" class="form-control" id="occupation" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">13. Whether MUET Employees? Yes/No <span class="required-star">*</span></label>
+                                        <select class="form-select" id="muetEmployee" required>
+                                            <option value="No">No</option>
+                                            <option value="Yes">Yes</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6" id="designationField" style="display: none;">
+                                        <label class="form-label">14. Designation</label>
+                                        <input type="text" class="form-control" id="designation">
+                                    </div>
+                                    <div class="col-md-6" id="departmentField" style="display: none;">
+                                        <label class="form-label">15. Department</label>
+                                        <input type="text" class="form-control" id="department">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 mt-4">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">16. Present Address of Parent / Guardian <span class="required-star">*</span></label>
+                                        <textarea class="form-control" id="permanentAddress" rows="2" required></textarea>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">17. Name of guardian (if parent is not coming) <span class="required-star">*</span></label>
+                                        <input type="text" class="form-control" id="guardianName" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">18. Contact No. Father's & Mother's <span class="required-star">*</span></label>
+                                        <input type="tel" class="form-control" id="parentsContact" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Instructions & Documents -->
+                            <div class="col-md-12 mt-5">
+                                <h4 class="section-title">Instructions & Undertaking</h4>
+                                <div class="bg-light p-4 rounded border mb-4">
+                                    <p class="small mb-3">I, <span id="pledgeParentName" class="fw-bold text-decoration-underline">________________</span> as a parent/guardian of <span id="pledgeChildName" class="fw-bold text-decoration-underline">________________</span>, admit my child to the Baby Day Care Center at Mehran University Higher Secondary Public School, Jamshoro. I understand and agree that the school management, Principal, Incharge Baby Day Care Center and or any teacher/staff member cannot be held responsible for any unintentional illnesses or accidents that may befall my child during their time at the day care center.</p>
+                                    <p class="small mb-3">I understand that the staff will take necessary precautions to ensure my child safety and well-being, but I acknowledge that accidents and illnesses can occur in any environment.</p>
+                                    <p class="small mb-3">I undertake to not hold the school management, Principal, Incharge Baby Day Care Center or any teacher staff member responsible for any such incidents and will not pursue legal or financial claims against them in the events of any such occurrences.</p>
+                                    <p class="small mb-3">I also undertake to inform the Baby Day Care center of any known allergies or medical conditions my child may have and to provide any necessary medications or treatments as required.</p>
+                                    <p class="small mb-0">I understand that this undertaking is a requirement for enrollment at the Baby Day Care Center and agree to abide by its items and condition.</p>
+                                    <div class="form-check mt-3">
+                                        <input class="form-check-input" type="checkbox" id="daycarePledgeCheck" required>
+                                        <label class="form-check-label fw-bold" for="daycarePledgeCheck">
+                                            I solemnly affirm that the particulars mentioned above are true and I agree to the undertaking.
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <h4 class="section-title">Document Upload</h4>
+                                <div class="alert alert-info">
+                                    <h6 class="fw-bold">Required Documents:</h6>
+                                    <ul class="small mb-0">
+                                        <li>02 Photographs</li>
+                                        <li>2 Photocopy of B from NADRA/Birth Certificate</li>
+                                        <li>Photocopy of father/Guardian CNIC</li>
+                                        <li id="muetDocBullet" style="display: none;">MUET Employee ID Card/Pay slip</li>
+                                        <li>CNIC of Aya/Driver</li>
+                                    </ul>
+                                    <p class="small mt-2 mb-0"><strong>Note:</strong> Child/Children age must be 2 Years and above.</p>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label">Upload all documents in one PDF or ZIP file <span class="required-star">*</span></label>
+                                    <input type="file" class="form-control" id="documentUpload" accept=".pdf,.zip" required>
+                                    <div id="uploadError" class="text-danger mt-1" style="display:none;">Please upload the required documents.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 text-center mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg px-5 rounded-pill">Submit Application</button>
+                                <p class="text-muted mt-3">Thank you for your cooperation</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./admission-script.js"></script>
+</body>
+</html>

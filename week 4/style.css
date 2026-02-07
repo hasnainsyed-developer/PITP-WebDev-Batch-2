@@ -408,4 +408,17 @@ body {
     .menu-card {
         height: auto;
     }
+} 
+
+/* Fix footer spacing on menu page */
+.menu-page .footer {
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+
+.menu-page {
+    margin: 0;
+    padding: 0;
 }

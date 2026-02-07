@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Academy | Single Page School Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="./admission-style.css">
+    <style>
+        /* Smooth Scrolling Enable */
+        html { scroll-behavior: smooth; }
+        section { scroll-margin-top: 70px; } /* Navbar height adjustment */
+    </style>
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <i class="fas fa-graduation-cap me-2"></i>MUHSPS
+            </a>
+            <div class="ms-auto">
+                <a href="index.html" class="btn btn-outline-primary rounded-pill px-4">Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-11">
+                <div class="form-container">
+                    <h2 class="text-center fw-bold mb-4">SCHOOL ADMISSION (PLAYGROUP TO 10TH)</h2>
+                    
+                    <form id="admissionForm">
+                        <div class="row g-4">
+                            <!-- Left Column: Student Details -->
+                            <div class="col-md-7">
+                                <h4 class="section-title">Student Details</h4>
+                                <div class="row g-3">
+                                    <div class="col-md-12">
+                                        <label class="form-label">Applying for Class <span class="required-star">*</span></label>
+                                        <select class="form-select" id="studentClass" required>
+                                            <option value="" selected disabled>Choose a class...</option>
+                                            <option value="Playgroup">Playgroup</option>
+                                            <option value="Nursery">Nursery</option>
+                                            <option value="KG">KG</option>
+                                            <option value="Class 1">Class 1</option>
+                                            <option value="Class 2">Class 2</option>
+                                            <option value="Class 3">Class 3</option>
+                                            <option value="Class 4">Class 4</option>
+                                            <option value="Class 5">Class 5</option>
+                                            <option value="Class 6">Class 6</option>
+                                            <option value="Class 7">Class 7</option>
+                                            <option value="Class 8">Class 8</option>
+                                            <option value="Class 9">Class 9</option>
+                                            <option value="Class 10">Class 10</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">1. Name of Student (in block letters) <span class="required-star">*</span></label>
+                                        <input type="text" class="form-control" id="studentName" style="text-transform: uppercase;" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">3. Surname & Mother Tongue <span class="required-star">*</span></label>
+                                        <input type="text" class="form-control" id="surnameMotherTongue" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">5. Date of Birth <span class="required-star">*</span></label>
+                                        <input type="date" class="form-control" id="dob" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">6. Place of Birth <span class="required-star">*</span></label>
+                                        <input type="text" class="form-control" id="pob" required>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">5. Age <span class="required-star">*</span></label>
+                                        <input type="text" class="form-control" id="age" required>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">8. Gender <span class="required-star">*</span></label>
+                                        <select class="form-select" id="gender" required>
+                                            <option value="" selected disabled>Select</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">7. B.Form No. <span class="required-star">*</span></label>
+                                        <input type="text" class="form-control" id="bFormNo" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">11. Religion <span class="required-star">*</span></label>
+                                        <input type="text" class="form-control" id="religion" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">9. School last attended</label>
+                                        <input type="text" class="form-control" id="lastSchool">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">10. Class Passed</label>
+                                        <input type="text" class="form-control" id="classPassed">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Column: Photo & Parent Details -->
+                            <div class="col-md-5">
+                                <div class="text-center mb-4">
+                                    <label class="form-label d-block mb-2">Student Photograph <span class="required-star">*</span></label>
+                                    <div class="photo-upload-box" onclick="document.getElementById('studentPhoto').click()">
+                                        <div id="photoPreview" class="photo-preview w-100 h-100 d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-plus-circle"></i>
+                                            <span>Upload size 5MB</span>
+                                        </div>
+                                    </div>
+                                    <input type="file" id="studentPhoto" class="d-none" accept="image/*" required>
+                                </div>
+
+                                <h4 class="section-title">Parent / Guardian Details</h4>
+                                <div class="row g-3">
+                                    <div class="col-md-12">
+                                        <label class="form-label">2. Father's/Guardian Name <span class="required-star">*</span></label>
+                                        <input type="text" class="form-control" id="fatherName" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">4. Father's CNIC <span class="required-star">*</span></label>
+                                        <input type="text" class="form-control" id="fatherCnic" placeholder="XXXXX-XXXXXXX-X" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">13. Occupation of Parent/Guardian <span class="required-star">*</span></label>
+                                        <input type="text" class="form-control" id="occupation" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="form-label">14. Whether MUET Employees? Yes/No <span class="required-star">*</span></label>
+                                        <select class="form-select" id="muetEmployee" required>
+                                            <option value="No">No</option>
+                                            <option value="Yes">Yes</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6" id="designationField" style="display: none;">
+                                        <label class="form-label">15. Designation</label>
+                                        <input type="text" class="form-control" id="designation">
+                                    </div>
+                                    <div class="col-md-6" id="departmentField" style="display: none;">
+                                        <label class="form-label">16. Department</label>
+                                        <input type="text" class="form-control" id="department">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 mt-4">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">17. Permanent Address of Parent/Guardian <span class="required-star">*</span></label>
+                                        <textarea class="form-control" id="permanentAddress" rows="2" required></textarea>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">18. Name & Present address of guardian <span class="required-star">*</span></label>
+                                        <textarea class="form-control" id="guardianAddress" rows="2" required></textarea>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">19. Contact No. <span class="required-star">*</span></label>
+                                        <input type="tel" class="form-control" id="contactNo" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">20. Whatsapp No. <span class="required-star">*</span></label>
+                                        <input type="tel" class="form-control" id="whatsappNo" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Instructions & Documents -->
+                            <div class="col-md-12 mt-5">
+                                <h4 class="section-title">Instructions & Pledges</h4>
+                                <div class="bg-light p-4 rounded border mb-4">
+                                    <h6 class="fw-bold border-bottom pb-2 mb-3">Student Pledge</h6>
+                                    <ol class="small">
+                                        <li>I will be regular and punctual.</li>
+                                        <li>I will devote all my energies to the achievement of better academic results.</li>
+                                        <li>I will appear in all tests and examinations conducted by the school/college from time to time during the academic session.</li>
+                                        <li>I will faithfully abide by the rules of the school / college discipline and under all circumstances remain loyal and honest to my Parents, Teachers.</li>
+                                        <li>I will never indulge myself in any kind of unhealthy activities and will always strive to uphold the dignity and traditions of my institution.</li>
+                                    </ol>
+                                    <div class="form-check mt-3">
+                                        <input class="form-check-input" type="checkbox" id="studentPledgeCheck" required>
+                                        <label class="form-check-label fw-bold" for="studentPledgeCheck">
+                                            I (Student) solemnly affirm to abide by the pledge above.
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="bg-light p-4 rounded border mb-4">
+                                    <h6 class="fw-bold border-bottom pb-2 mb-3">Parent/Guardian Pledge</h6>
+                                    <ol class="small">
+                                        <li>I under take responsibility of sending my Son/Daughter/ Ward regularly in time to school / college.</li>
+                                        <li>In Case, the child is unable to attend school / college, on any day, I will request the Principal / Class Teacher in writing to grant him/her leave.</li>
+                                        <li>I will pay the school / college Fees on or before 10th of every month, regularly.</li>
+                                        <li>I will provide child with the prescribed uniform and see that the child attains classes everyday in clean uniform.</li>
+                                        <li>I will cooperate with the authorities and do my best to carry out the suggestions given from time to time regarding the progress of my child.</li>
+                                        <li>I do accept the TC given to my child after three consecutive warnings / notices.</li>
+                                        <li>I fully agree and abide by the note given above.</li>
+                                    </ol>
+                                    <div class="form-check mt-3">
+                                        <input class="form-check-input" type="checkbox" id="parentPledgeCheck" required>
+                                        <label class="form-check-label fw-bold" for="parentPledgeCheck">
+                                            I (Parent/Guardian) solemnly affirm that the particulars mentioned above are true and I agree to the pledge.
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <h4 class="section-title">Document Upload</h4>
+                                <div class="alert alert-info">
+                                    <h6 class="fw-bold">Required Documents:</h6>
+                                    <ul class="small mb-0">
+                                        <li>04 Photographs</li>
+                                        <li>Original Certificate (T.C/School Leaving Certificate/Character)</li>
+                                        <li>Original Marksheet + Attested Copies</li>
+                                        <li>Eligibility Certificate (Only For HSC-1 admission of other Board Students)</li>
+                                        <li>Photocopy of B from NADRA</li>
+                                        <li>Photocopy of Father/Guardian CNIC</li>
+                                        <li id="muetDocBullet" style="display: none;">MUET Employee ID Card / Pay slip</li>
+                                        <li>Proforma for Transport Facility (Optional)</li>
+                                    </ul>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label">Upload all documents in one PDF or ZIP file <span class="required-star">*</span></label>
+                                    <input type="file" class="form-control" id="documentUpload" accept=".pdf,.zip" required>
+                                    <div id="uploadError" class="text-danger mt-1" style="display:none;">Please upload the required documents.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 text-center mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg px-5 rounded-pill">Submit Application</button>
+                                <p class="text-muted mt-3">Thank you for your cooperation</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./admission-script.js"></script>
+</body>
+</html>
